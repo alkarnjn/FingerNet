@@ -67,7 +67,8 @@ def mnt_writer(mnt, image_name, image_size, file_name):
     f.write('%s\n'%(image_name))
     f.write('%d %d %d\n'%(mnt.shape[0], image_size[0], image_size[1]))
     for i in range(mnt.shape[0]):
-        f.write('%d %d %.6f\n'%(mnt[i,0], mnt[i,1], mnt[i,2]))
+        f.write('%d %d %.6f'%(mnt[i,0], mnt[i,1], mnt[i,2]))
+        f.write('alka\n')
     f.close()
     return
 
